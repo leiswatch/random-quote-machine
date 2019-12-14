@@ -11,6 +11,10 @@ const QUOTE_API_URL: string = 'http://quotes.stormconsultancy.co.uk/random.json'
 export default class QuoteBox extends React.Component<{}, QuoteBoxState> {
   state: QuoteBoxState = { content: '', author: '' };
 
+  componentDidMount(): void {
+    this.generateQuote();
+  }
+
   generateQuote = (): void => {
     fetch(QUOTE_API_URL)
       .then((data) => data.json())
