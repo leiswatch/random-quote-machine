@@ -1,14 +1,22 @@
 import * as React from 'react';
 
 type QuoteBoxViewProps = {
-  quote: string;
+  content: string;
+  author: string;
   onButtonClick: () => void;
 };
 
-const QuoteBoxView: React.FunctionComponent<QuoteBoxViewProps> = ({ quote, onButtonClick }) => (
-  <div>
-    <p>{quote}</p>
-    <button onClick={onButtonClick}>Generate quote</button>
+const QuoteBoxView: React.FunctionComponent<QuoteBoxViewProps> = ({
+  content,
+  author,
+  onButtonClick,
+}) => (
+  <div className='quote-box'>
+    <p className='quote-box__content'>{content}</p>
+    <p className='quote-box__author'>{author}</p>
+    <button className='quote-box__button' onClick={onButtonClick}>
+      Generate quote
+    </button>
   </div>
 );
 
