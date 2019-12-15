@@ -19,6 +19,10 @@ html {
         background: none;
       }
     }
+
+    @media (max-height: 568px) {
+      font-size: 10px;
+    }
   }
 }
 
