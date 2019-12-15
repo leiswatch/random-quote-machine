@@ -12,10 +12,12 @@ const QuoteBoxView: React.FunctionComponent<QuoteBoxViewProps> = ({
   onButtonClick,
 }) => (
   <div className='quote-box'>
-    <p className='quote-box__content'>{content}</p>
-    <p className='quote-box__author'>{author}</p>
+    <div className='quote-box__quote'>
+      <p className='quote-box__content'>{content}</p>
+      <p className='quote-box__author'>{author}</p>
+    </div>
     <button className='quote-box__button' onClick={onButtonClick}>
-      Generate quote
+      <i className='fas fa-redo'></i>
     </button>
   </div>
 );
